@@ -71,16 +71,20 @@ section {
 }
 
 button {
-    background-color: #ff9900;
-    border: none;
-    padding: 10px 20px;
-    color: #121212;
-    cursor: pointer;
+    background-color: #ff6600; /* Snygg orange färg */
+    color: white; /* Vit text */
+    font-size: 16px; /* Större och tydligare text */
+    padding: 10px 20px; /* Mer utrymme runt texten */
+    border: none; /* Tar bort standardramen */
+    border-radius: 5px; /* Rundade hörn */
+    cursor: pointer; /* Visar att knappen är klickbar */
+    transition: 0.3s; /* Mjukare hover-effekt */
 }
 
 button:hover {
-    background-color: #ff6600;
+    background-color: #e65c00; /* Lite mörkare orange vid hover */
 }
+
 
 #info {
     text-align: left;
