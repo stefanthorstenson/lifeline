@@ -41,6 +41,15 @@ form textarea {
     width: 100%; /* Makes inputs take full width */
 }
 
+form input,
+form textarea {
+    width: 300px; /* Sätter en fast bredd */
+    max-width: 100%; /* Säkerställer responsiv anpassning */
+    padding: 8px; /* Gör fälten mer användarvänliga */
+    border: 1px solid #ccc; /* Lägger till en subtil kant */
+    border-radius: 5px; /* Rundade hörn för snyggare design */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
