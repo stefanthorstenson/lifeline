@@ -53,13 +53,17 @@ button:hover {
     background-color: #ff6600;
 }
 
-#lyssna a {
+#info {
+    text-align: left;
+}
+
+a {
     color: #ff9900; /* Välj din färg */
     text-decoration: none; /* Tar bort understrykning */
     font-weight: bold;
 }
 
-#lyssna a:hover {
+a:hover {
     color: #ff6600; /* Ändrar färg vid hover */
     text-decoration: underline; /* Visar understrykning vid hover */
 }
