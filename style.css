@@ -53,3 +53,9 @@ button:hover {
         width: 90%;
     }
 }
+
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}
