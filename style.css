@@ -42,6 +42,17 @@ button:hover {
     background-color: #ff6600;
 }
 
+#lyssna a {
+    color: #ff9900; /* Välj din färg */
+    text-decoration: none; /* Tar bort understrykning */
+    font-weight: bold;
+}
+
+#lyssna a:hover {
+    color: #ff6600; /* Ändrar färg vid hover */
+    text-decoration: underline; /* Visar understrykning vid hover */
+}
+
 /* Responsiv design */
 @media (max-width: 600px) {
     nav ul li {
