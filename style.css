@@ -66,6 +66,11 @@ nav a {
     text-decoration: none;
 }
 
+services ul {
+    list-style-type: none; /* Tar bort punkterna */
+    padding-left: 0; /* Tar bort extra indrag */
+}
+
 section {
     margin: 50px auto;
     width: 80%;
