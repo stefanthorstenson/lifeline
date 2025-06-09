@@ -33,21 +33,21 @@ img {
     margin: 0 auto; /* Centrerar bilden */
 }
 
-form label,
-form input,
-form textarea {
-    display: block; /* Each element gets its own line */
-    margin-bottom: 10px; /* Adds spacing between fields */
-    width: 100%; /* Makes inputs take full width */
+form {
+    display: flex; /* Använder Flexbox för centrering */
+    flex-direction: column; /* Ställer in fälten vertikalt */
+    align-items: center; /* Centrerar fälten horisontellt */
+    justify-content: center; /* Centrerar innehållet vertikalt */
+    width: 100%; /* Anpassar sig till skärmens bredd */
 }
 
 form input,
 form textarea {
-    width: 300px; /* Sätter en fast bredd */
-    max-width: 100%; /* Säkerställer responsiv anpassning */
-    padding: 8px; /* Gör fälten mer användarvänliga */
-    border: 1px solid #ccc; /* Lägger till en subtil kant */
-    border-radius: 5px; /* Rundade hörn för snyggare design */
+    width: 300px; /* Sätter en fast bredd på fälten */
+    max-width: 100%; /* Gör dem responsiva */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 nav ul {
