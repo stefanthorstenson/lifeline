@@ -7,7 +7,12 @@ body {
 
 header {
     background-color: #1a1a1a;
-    padding: 20px;
+    background-image: url('images/liifeline.jpg'); /* Path to the background image */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: top; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 60px 20px; /* Adds space around the content */
+    text-align: center; /* Centers the text */
 }
 
 h1 {
@@ -66,15 +71,6 @@ a {
 a:hover {
     color: #ff6600; /* Ändrar färg vid hover */
     text-decoration: underline; /* Visar understrykning vid hover */
-}
-
-header {
-    background-image: url('images/liifeline.jpg'); /* Path to the background image */
-    background-size: cover; /* Ensures the image covers the entire header */
-    background-position: top; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    padding: 60px 20px; /* Adds space around the content */
-    text-align: center; /* Centers the text */
 }
 
 /* Responsiv design */
