@@ -26,6 +26,13 @@ h1 {
     font-weight: bold; /* Make it stand out */
 }
 
+img {
+    max-width: 100%; /* Bilden anpassas till skärmens bredd */
+    height: auto; /* Behåller proportionerna */
+    display: block; /* Förhindrar onödiga mellanrum */
+    margin: 0 auto; /* Centrerar bilden */
+}
+
 form label,
 form input,
 form textarea {
