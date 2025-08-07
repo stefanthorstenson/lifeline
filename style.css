@@ -111,7 +111,7 @@ header {
 
 #kontakt {
     position: relative;
-    background-image: url('images/marcus02.jpg'); /* Placeholder, byt ut mot riktig bild */
+    background-image: url('images/gallery/marcus02.jpg'); /* Placeholder, byt ut mot riktig bild */
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -139,7 +139,7 @@ header {
 
 #lyssna {
     position: relative;
-    background-image: url('images/marcus01.jpg'); /* Placeholder, byt ut mot riktig bild */
+    background-image: url('images/gallery/marcus01.jpg'); /* Placeholder, byt ut mot riktig bild */
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -167,7 +167,7 @@ header {
 
 #info {
     position: relative;
-    background-image: url('images/mark01.jpg');
+    background-image: url('images/gallery/mark01.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -201,7 +201,7 @@ header {
 
 #services {
     position: relative;
-    background-image: url('images/dala_henrik01.jpg');
+    background-image: url('images/gallery/dala_henrik01.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
