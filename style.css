@@ -266,6 +266,20 @@ form textarea {
 section {
     margin: 50px auto;
     width: 80%;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+
+section.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+section.fade-out {
+    opacity: 0;
+    transform: translateX(-30px);
+    pointer-events: none;
 }
 
 button {
