@@ -1,3 +1,31 @@
+/* Full-width background for intro section */
+#intro {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.intro-bg {
+    width: 100%;
+    min-height: 200px;
+    /* Removed background image lifeline_superheroes.jpg */
+    background: #1a1a1a; /* fallback solid color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+    box-sizing: border-box;
+}
 header, nav {
     position: fixed;
     top: 0;
