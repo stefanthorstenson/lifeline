@@ -146,6 +146,58 @@ document.querySelector("form").addEventListener("submit", function(event) {
         <a href="https://vm.tiktok.com/ZNd9Tfpp5" target="_blank">TikTok</a>
     </section>
 
+<!-- Gallery Section -->
+<section id="gallery" class="gallery-section">
+    <h2>Bildgalleri</h2>
+    <div class="gallery-grid">
+        <img src="images/gallery/dala01.jpg" alt="Galleri bild 1">
+        <img src="images/gallery/dala02.jpg" alt="Galleri bild 2">
+        <img src="images/gallery/dala_henrik01.jpg" alt="Galleri bild 3">
+        <img src="images/gallery/marcus01.jpg" alt="Galleri bild 4">
+        <img src="images/gallery/marcus02.jpg" alt="Galleri bild 5">
+        <img src="images/gallery/mark01.jpg" alt="Galleri bild 6">
+    </div>
+    <!-- Modal for full-size image -->
+    <div class="gallery-modal" id="galleryModal">
+        <button class="close-btn" id="closeGalleryModal" aria-label="Stäng">&times;</button>
+        <img src="" alt="Fullstor bild" id="modalImage">
+    </div>
+</section>
+
+<script>
+// Gallery modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryImages = document.querySelectorAll('.gallery-grid img');
+    const modal = document.getElementById('galleryModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = document.getElementById('closeGalleryModal');
+
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.classList.add('active');
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+        });
+    });
+    closeBtn.addEventListener('click', function() {
+        modal.classList.remove('active');
+        modalImg.src = '';
+    });
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            modalImg.src = '';
+        }
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            modalImg.src = '';
+        }
+    });
+});
+</script>
+
     <footer style="background: url('images/lifeline_superheroes.jpg') center center/cover no-repeat; aspect-ratio: 3/2; width: 100%; min-height: 200px; display: flex; align-items: flex-end;">
         <p style="background: rgba(255,255,255,0.8); margin: 0; padding: 8px 16px; border-radius: 8px 8px 0 0;">&copy; 2025 Lifeline. Antal unika besökare sedan 2025: 276324 </p>
     </footer>
