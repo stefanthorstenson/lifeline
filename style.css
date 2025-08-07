@@ -7,7 +7,7 @@ body {
 
 header {
     background-color: #1a1a1a;
-    background-image: url('images/liifeline.jpg'); /* Path to the background image */
+    background-image: url('images/lifeline_logo.jpeg'); /* Path to the background image */
     background-size: cover; /* Ensures the image covers the entire header */
     background-position: top; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
