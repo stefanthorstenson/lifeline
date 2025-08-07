@@ -179,6 +179,11 @@ document.addEventListener('DOMContentLoaded', function() {
             modalImg.alt = this.alt;
         });
     });
+    // Close modal when clicking the image itself
+    modalImg.addEventListener('click', function() {
+        modal.classList.remove('active');
+        modalImg.src = '';
+    });
     closeBtn.addEventListener('click', function() {
         modal.classList.remove('active');
         modalImg.src = '';
