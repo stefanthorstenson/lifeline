@@ -58,8 +58,14 @@ document.querySelector("form").addEventListener("submit", function(event) {
         });
     });
     </script>
+
     <header>
-        <nav>
+        <button class="hamburger" id="hamburger-btn" aria-label="Öppna meny" aria-expanded="false" aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="main-nav">
             <ul>
                 <li><a href="#info">Info</a></li>
                 <li><a href="#services">Tjänster</a></li>
@@ -238,6 +244,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (yearSpan) {
             yearSpan.textContent = new Date().getFullYear();
         }
+    });
+    </script>
+    <script>
+    // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger-btn');
+        const nav = document.getElementById('main-nav');
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !expanded);
+        });
     });
     </script>
 </body>
