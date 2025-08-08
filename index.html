@@ -18,7 +18,7 @@
 
 <script>
 document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Förhindrar standardformulärsändning
+    event.preventDefault(); // Prevents default form submission
     const form = event.target;
     
     fetch(form.action, {
@@ -27,11 +27,11 @@ document.querySelector("form").addEventListener("submit", function(event) {
     })
     .then(response => {
         if (response.ok) {
-            document.getElementById("confirmation").style.display = "block"; // Visar bekräftelsen
-            form.reset(); // Tömmer formuläret
+            document.getElementById("confirmation").style.display = "block"; // Shows confirmation
+            form.reset(); // Clears the form
         }
     })
-    .catch(error => console.error("Fel vid skickning:", error));
+    .catch(error => console.error("Error during submission:", error));
 });
 </script>
 
@@ -106,6 +106,23 @@ document.querySelector("form").addEventListener("submit", function(event) {
         <p>Fyll i <a href="#kontakt">kontaktformuläret</a> och berätta vad du föredrar!</p>
     </section>
 
+    <section id="lyssna">
+        <h2>Lyssna på oss</h2>
+        <p>Här är vår Spotify-setlist med låtar vi spelar:</p>
+        <div style="max-width: 400px; margin-bottom: 1em;">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1WTiD5KH5TFoRmgUXN7ihG?utm_source=generator" width="100%" height="380" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <p>Video på gång! Stay tuned.</p>
+        <!-- <p>Här är en video från oss:</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/kbpqZT_56Ns" frameborder="0" allowfullscreen></iframe>
+        </div> -->
+        <p>Följ oss på:</p>
+        <a href="https://open.spotify.com/playlist/1WTiD5KH5TFoRmgUXN7ihG?si=tnuhScdNQkW7XlTgyNxIqg&pi=2fBTpQ3cRqmzi" target="_blank">Spotify setlist</a>
+        <a href="https://youtube.com/@sonsofthorsten5875" target="_blank">YouTube</a>
+        <a href="https://vm.tiktok.com/ZNd9Tfpp5" target="_blank">TikTok</a>
+    </section>
+    
     <section id="kontakt">
         <h2>Boka Lifeline</h2>
         <p>Fyll i formuläret nedan för att skicka en bokningsförfrågan. Ej bindande såklart! Fält markerade med <strong>*</strong> är obligatoriska.</p>
@@ -150,23 +167,6 @@ document.querySelector("form").addEventListener("submit", function(event) {
         <div id="confirmation" style="display: none; color: green; font-weight: bold;">
             Tack! Din bokningsförfrågan har skickats.
         </div>
-    </section>
-
-    <section id="lyssna">
-        <h2>Lyssna på oss</h2>
-        <p>Här är vår Spotify-setlist med låtar vi spelar:</p>
-        <div style="max-width: 400px; margin-bottom: 1em;">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1WTiD5KH5TFoRmgUXN7ihG?utm_source=generator" width="100%" height="380" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        <p>Video på gång! Stay tuned.</p>
-        <!-- <p>Här är en video från oss:</p>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/kbpqZT_56Ns" frameborder="0" allowfullscreen></iframe>
-        </div> -->
-        <p>Följ oss på:</p>
-        <a href="https://open.spotify.com/playlist/1WTiD5KH5TFoRmgUXN7ihG?si=tnuhScdNQkW7XlTgyNxIqg&pi=2fBTpQ3cRqmzi" target="_blank">Spotify setlist</a>
-        <a href="https://youtube.com/@sonsofthorsten5875" target="_blank">YouTube</a>
-        <a href="https://vm.tiktok.com/ZNd9Tfpp5" target="_blank">TikTok</a>
     </section>
 
 <!-- Gallery Section -->
@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <p id="footer-year" style="background: rgba(255,255,255,0.8); margin: 0; padding: 8px 16px; border-radius: 8px 8px 0 0;">&copy; <span id="year"></span> Lifeline</p>
     </footer>
     <script>
-    // Sätt aktuellt år i footern automatiskt
+    // Automatically set the current year in the footer
     document.addEventListener('DOMContentLoaded', function() {
         var yearSpan = document.getElementById('year');
         if (yearSpan) {
