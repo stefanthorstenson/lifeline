@@ -1,5 +1,6 @@
 Lägg upp på Loopia
     Kolla att man inte får certifikatfel på www.lifelineband.se
+På mobile känns sektionerna lite slöa på att ladda
 Google Search Console (https://plilja.se/custom-domain-name-github-pages/)
     Vad är det?
 Följ oss: Byt ut till ikoner
