@@ -210,7 +210,16 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
     <footer style="background: url('images/lifeline_superheroes.jpg') center center/cover no-repeat; aspect-ratio: 3/2; width: 100%; min-height: 200px; display: flex; align-items: flex-end;">
-        <p style="background: rgba(255,255,255,0.8); margin: 0; padding: 8px 16px; border-radius: 8px 8px 0 0;">&copy; 2025 Lifeline. Antal unika besökare sedan 2025: 276324 </p>
+        <p id="footer-year" style="background: rgba(255,255,255,0.8); margin: 0; padding: 8px 16px; border-radius: 8px 8px 0 0;">&copy; <span id="year"></span> Lifeline</p>
     </footer>
+    <script>
+    // Sätt aktuellt år i footern automatiskt
+    document.addEventListener('DOMContentLoaded', function() {
+        var yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    });
+    </script>
 </body>
 </html>
