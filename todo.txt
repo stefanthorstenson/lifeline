@@ -2,5 +2,3 @@ Lägg upp på Loopia
     Kolla att man inte får certifikatfel på www.lifelineband.se
 Google Search Console (https://plilja.se/custom-domain-name-github-pages/)
     Vad är det?
-Följ oss: Byt ut till ikoner
-Skapa Youtube-kanal
