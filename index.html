@@ -42,7 +42,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
                 }
             });
         }, {
-            threshold: 0.15
+            threshold: 0.05 // Sets the threshold for when the fade-in effect should trigger
         });
         sections.forEach(function(section) {
             observer.observe(section);
