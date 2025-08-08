@@ -93,7 +93,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
             <li>2 x 45 min.</li>
             <li>3 x 45 min.</li>
         </ul>
-        <p><strong>Detta ingår:</strong> Ljud, ljus.</p>
+        <p><strong>Ljud- och ljusutrustning kan vi ta med om det behövs.</p>
         <p>Fyll i <a href="#kontakt">kontaktformuläret</a> och berätta vad du föredrar!</p>
     </section>
 
@@ -121,6 +121,16 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
             <label for="langd">Ungefärlig längd på spelning:</label>
             <input type="text" id="langd" name="langd">
+
+            <label for="utrustning">Ljud- och ljusutrustning finns på plats:</label>
+            <select id="utrustning" name="utrustning" required>
+            <option value="">Välj...</option>
+                <option value="Ja">Ja</option>
+                <option value="Nej">Nej</option>
+                <option value="Delvis">Delvis</option>
+                <option value="Vet ej">Vet ej</option>
+            </select>
+            <div style="margin-bottom: 0.7em;"></div>
 
             <label for="meddelande">Fritext:</label>
             <textarea id="meddelande" name="meddelande" rows="4"></textarea>

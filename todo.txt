@@ -1,6 +1,5 @@
 Lägg upp på Loopia
     Kolla att man inte får certifikatfel på www.lifelineband.se
-På mobile känns sektionerna lite slöa på att ladda
 Hur styr man vilken bild som visas i Messenger när man lägger en länk?
 Hamburgarmeny för mobile
 Google Search Console (https://plilja.se/custom-domain-name-github-pages/)
