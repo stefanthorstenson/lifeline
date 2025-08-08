@@ -172,7 +172,7 @@ header {
 
 #kontakt {
     position: relative;
-    background-image: url('images/gallery/marcus02.jpg'); /* Placeholder, byt ut mot riktig bild */
+    background-image: url('images/gallery/marcus02.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -193,14 +193,10 @@ header {
     position: relative;
     z-index: 1;
 }
-#kontakt h2, #kontakt p, #kontakt strong, #kontakt label, #kontakt input, #kontakt textarea, #kontakt button, #kontakt a {
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.95);
-}
 
 #lyssna {
     position: relative;
-    background-image: url('images/gallery/marcus01.jpg'); /* Placeholder, byt ut mot riktig bild */
+    background-image: url('images/gallery/marcus01.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -220,10 +216,6 @@ header {
 #lyssna > * {
     position: relative;
     z-index: 1;
-}
-#lyssna h2, #lyssna p, #lyssna a {
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.95);
 }
 
 #info {
@@ -248,10 +240,6 @@ header {
 #info > * {
     position: relative;
     z-index: 1;
-}
-#info h1, #info h2, #info p, #info strong, #info a {
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.95);
 }
 #info img {
     border: 4px solid rgba(255,255,255,0.7);
@@ -282,10 +270,6 @@ header {
 #services > * {
     position: relative;
     z-index: 1;
-}
-#services h2, #services p, #services strong, #services ul, #services li, #services a {
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.95);
 }
 
 h1 {
