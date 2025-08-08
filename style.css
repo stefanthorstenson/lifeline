@@ -170,9 +170,10 @@ header {
     text-align: center; /* Centers the text */
 }
 
-#kontakt {
+
+/* Gemensamma regler för sektioner med bakgrundsbild */
+#kontakt, #lyssna, #info, #services {
     position: relative;
-    background-image: url('images/gallery/marcus02.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -181,7 +182,7 @@ header {
     z-index: 1;
     text-align: left;
 }
-#kontakt::before {
+#kontakt::before, #lyssna::before, #info::before, #services::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -189,87 +190,22 @@ header {
     z-index: 0;
     border-radius: inherit;
 }
-#kontakt > * {
+#kontakt > *, #lyssna > *, #info > *, #services > * {
     position: relative;
     z-index: 1;
 }
 
-#lyssna {
-    position: relative;
-    background-image: url('images/gallery/marcus01.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.95);
-    padding: 48px 32px;
-    z-index: 1;
-    text-align: left;
-}
-#lyssna::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.65);
-    z-index: 0;
-    border-radius: inherit;
-}
-#lyssna > * {
-    position: relative;
-    z-index: 1;
-}
+/* Unika bakgrundsbilder för varje sektion */
+#kontakt { background-image: url('images/gallery/marcus02.jpg'); }
+#lyssna { background-image: url('images/gallery/marcus01.jpg'); }
+#info { background-image: url('images/gallery/mark01.jpg'); }
+#services { background-image: url('images/gallery/dala_henrik01.jpg'); }
 
-#info {
-    position: relative;
-    background-image: url('images/gallery/mark01.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.95);
-    padding: 48px 32px;
-    z-index: 1;
-    text-align: left;
-}
-#info::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.65);
-    z-index: 0;
-    border-radius: inherit;
-}
-#info > * {
-    position: relative;
-    z-index: 1;
-}
 #info img {
     border: 4px solid rgba(255,255,255,0.7);
     border-radius: 12px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.4);
     margin: 24px 0;
-}
-
-#services {
-    position: relative;
-    background-image: url('images/gallery/dala_henrik01.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.95);
-    padding: 48px 32px;
-    z-index: 1;
-    text-align: left;
-}
-#services::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.65);
-    z-index: 0;
-    border-radius: inherit;
-}
-#services > * {
-    position: relative;
-    z-index: 1;
 }
 
 h1 {
