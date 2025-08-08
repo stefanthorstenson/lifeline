@@ -1,6 +1,6 @@
 /* --- Hamburger Menu --- */
 .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -14,57 +14,44 @@
     top: 18px;
     left: 18px;
 }
-.hamburger span {
-    display: block;
-    width: 28px;
-    height: 4px;
-    margin: 4px 0;
-    background: #ff9900;
-    border-radius: 2px;
-    transition: 0.3s;
+.hamburger-icon rect {
+    transition: transform 0.3s, opacity 0.3s;
+    transform-origin: center;
 }
-.hamburger.open span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+.hamburger.open .hamburger-icon rect:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
 }
-.hamburger.open span:nth-child(2) {
+.hamburger.open .hamburger-icon rect:nth-child(2) {
     opacity: 0;
 }
-.hamburger.open span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+.hamburger.open .hamburger-icon rect:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (max-width: 800px) {
-    .hamburger {
-        display: flex;
-    }
-    nav#main-nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        background: rgba(26,26,26,0.98);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-        transform: translateY(-100%);
-        transition: transform 0.3s;
-        z-index: 1050;
-    }
-    nav#main-nav.open {
-        transform: translateY(0);
-    }
-    nav#main-nav ul {
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 2.5rem 0 2rem 0;
-    }
-    nav#main-nav ul li {
-        margin: 0;
-    }
+nav#main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: rgba(26,26,26,0.98);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+    z-index: 1050;
 }
-
-@media (max-width: 800px) {
-    nav#main-nav {
-        display: block;
-    }
+nav#main-nav.open {
+    transform: translateY(0);
+}
+nav#main-nav ul {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav#main-nav ul li {
+    margin: 0;
 }
 /* Full-width background for intro section */
 #intro {
@@ -120,16 +107,12 @@ nav {
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 1rem 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 10px;
 }
 
