@@ -20,7 +20,7 @@
 document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevents default form submission
     const form = event.target;
-    
+
     fetch(form.action, {
         method: form.method,
         body: new FormData(form)
@@ -98,34 +98,20 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
         <p>Lifeline spelar <strong>över hela Skåne</strong>.</p>
 
-        <p><strong>🎸 Vill du boka oss? Hör av dig via <a href="#kontakt">kontaktformuläret</a> så skapar vi magi tillsammans!</strong></p>
-    </section>
-
-    <section id="services">
-        <h2>Tjänster</h2>
-        <p>Vi anpassar spelningen till era önskemål!</p>
-        <p><strong>Vanliga upplägg:</strong></p>
-        <ul>
-            <li>1 x 60 min.</li>
-            <li>2 x 45 min.</li>
-            <li>3 x 45 min.</li>
-        </ul>
-        <p><strong>Ljud- och ljusutrustning kan vi ta med om det behövs.</p>
-        <p>Fyll i <a href="#kontakt">kontaktformuläret</a> och berätta vad du föredrar!</p>
+        <p><strong>🎸 Vill du BOKA OSS? Hör av dig via <a href="#kontakt">kontaktformuläret</a> så skapar vi magi tillsammans!</strong></p>
     </section>
 
     <section id="lyssna">
         <h2>Lyssna på oss</h2>
-        <p>Här är vår Spotify-setlist med låtar vi spelar:</p>
+        <p>Här är vår Spotify-setlist med låtar vi spelar. Ni kan välja fritt från den eller så sätter vi ihop ett paket till er som vi tror passar!</p>
         <div style="max-width: 400px; margin-bottom: 1em;">
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1WTiD5KH5TFoRmgUXN7ihG?utm_source=generator" width="100%" height="380" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
-        <p>Video på gång! Stay tuned.</p>
-        <!-- <p>Här är en video från oss:</p>
+                <p>Här är en video. <a href="https://youtu.be/qmJx0qZP9VI" target="_blank">Klicka här</a> om din webläsare inte vill spela upp den.</p>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/kbpqZT_56Ns" frameborder="0" allowfullscreen></iframe>
-        </div> -->
-        <p>Följ oss på:</p>
+            <iframe src="https://youtu.be/qmJx0qZP9VI" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p>Följ oss även på:</p>
         <div class="social-icons">
             <a href="https://open.spotify.com/playlist/1WTiD5KH5TFoRmgUXN7ihG?si=tnuhScdNQkW7XlTgyNxIqg&pi=2fBTpQ3cRqmzi" target="_blank" aria-label="Spotify" style="margin-right: 12px;">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -147,14 +133,27 @@ document.querySelector("form").addEventListener("submit", function(event) {
             </a>
         </div>
     </section>
-    
+
+    <section id="services">
+        <h2>Tjänster</h2>
+        <p>Vi anpassar spelningen till era önskemål!</p>
+        <p><strong>Vanliga upplägg:</strong></p>
+        <ul>
+            <li>1 x 60 min.</li>
+            <li>2 x 45 min.</li>
+            <li>3 x 45 min.</li>
+        </ul>
+        <p><strong>Ljud- och ljusutrustning kan vi ta med om det behövs.</p>
+        <p>Fyll i <a href="#kontakt">kontaktformuläret</a> och berätta vad du föredrar!</p>
+    </section>
+
     <section id="kontakt">
         <h2>Boka Lifeline</h2>
         <p>Fyll i formuläret nedan för att skicka en bokningsförfrågan. Ej bindande såklart! Fält markerade med <strong>*</strong> är obligatoriska.</p>
 
         <form action="https://formsubmit.co/0c6f12740fe3ea3cd046831266073b58" method="POST" target="_self" data-redirect="false">
             <input type="hidden" name="_captcha" value="false">
-            
+
             <label for="namn">Namn <strong>*</strong>:</label>
             <input type="text" id="namn" name="namn" required>
 
