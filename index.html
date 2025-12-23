@@ -16,26 +16,24 @@
     <meta property="og:url" content="https://www.lifelineband.se/" />
 </head>
 
-<script>
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevents default form submission
-    const form = event.target;
-
-    fetch(form.action, {
-        method: form.method,
-        body: new FormData(form)
-    })
-    .then(response => {
-        if (response.ok) {
-            document.getElementById("confirmation").style.display = "block"; // Shows confirmation
-            form.reset(); // Clears the form
-        }
-    })
-    .catch(error => console.error("Error during submission:", error));
-});
-</script>
-
 <body>
+    <script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevents default form submission
+        const form = event.target;
+            fetch(form.action, {
+            method: form.method,
+            body: new FormData(form)
+        })
+        .then(response => {
+            if (response.ok) {
+                document.getElementById("confirmation").style.display = "block"; // Shows confirmation
+                form.reset(); // Clears the form
+            }
+        })
+        .catch(error => console.error("Error during submission:", error));
+    });
+    </script>
     <script>
     // Scroll-triggered fade-in and fade-out effect for sections
     window.addEventListener('DOMContentLoaded', function() {
@@ -88,7 +86,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
     <section id="info">
         <h1>LIFELINE</h1>
         <h2>Coverband i Skåne</h2>
-        <p>Letar du efter ett <strong>coverband som höjer stämningen på din fest</strong>? Lifeline spelar rock och pop från <strong>hela musikhistorien</strong>, med låtar som passar <strong>er fest</strong> och </strong> <strong>alla generationer</strong>.</p>
+        <p>Letar du efter ett <strong>coverband som höjer stämningen på din fest</strong>? Lifeline spelar rock och pop från <strong>hela musikhistorien</strong>, med låtar som passar <strong>er fest</strong> och <strong>alla generationer</strong>.</p>
         <p>Tillsammans med er skapar vi en <strong>skräddarsydd kväll</strong>, där vi anpassar låtlista och upplägg för att passa just ert evenemang. <br>
         Oavsett om du planerar ett <strong>bröllop, en företagsfest eller en födelsedagsfest</strong>, är vi bandet som gör din kväll magisk. <br>
         <strong>Behöver du ett kompband för en speciell framträdande artist?</strong> Vi fixar det! <br> 
@@ -108,9 +106,14 @@ document.querySelector("form").addEventListener("submit", function(event) {
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1WTiD5KH5TFoRmgUXN7ihG?utm_source=generator" width="100%" height="380" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
         <p>Nu finns en video på oss på Youtube: <a href="https://youtu.be/qmJx0qZP9VI" target="_blank">Klicka här</a></p>
-        <!-- <div class="video-container"> -->
-        <!--     <iframe src="https://youtu.be/qmJx0qZP9VI" frameborder="0" allowfullscreen></iframe> -->
-        <!-- </div> -->
+        <div class="video-container">
+                        <iframe 
+                                width="420" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/qmJx0qZP9VI"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                        ></iframe>
+        </div>
         <p>Följ oss även på:</p>
         <div class="social-icons">
             <a href="https://open.spotify.com/playlist/1WTiD5KH5TFoRmgUXN7ihG?si=tnuhScdNQkW7XlTgyNxIqg&pi=2fBTpQ3cRqmzi" target="_blank" aria-label="Spotify" style="margin-right: 12px;">
@@ -143,7 +146,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
             <li>2 x 45 min.</li>
             <li>3 x 45 min.</li>
         </ul>
-        <p><strong>Ljud- och ljusutrustning kan vi ta med om det behövs.</p>
+                        <p><strong>Ljud- och ljusutrustning kan vi ta med om det behövs.</strong></p>
         <p>Fyll i <a href="#kontakt">kontaktformuläret</a> och berätta vad du föredrar!</p>
     </section>
 
