@@ -88,6 +88,10 @@ nav#main-nav ul li {
     background-image: url('images/lifeline_logo.png');
 }
 
+.social-icons-large {
+    margin-top: 24px;
+}
+
 @media (max-width: 900px) {
   .intro-bg {
     min-height: 0;
