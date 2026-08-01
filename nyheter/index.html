@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Nyheter - Lifeline Coverband i Skåne</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- Open Graph meta tags for social media preview -->
+    <meta property="og:title" content="Nyheter - Lifeline Coverband i Skåne" />
+    <meta property="og:description" content="Senaste nyheterna från Lifeline." />
+    <meta property="og:image" content="https://www.lifelineband.se/images/lifeline_superheroes.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.lifelineband.se/nyheter" />
+</head>
+
+<body>
+    <script>
+    // Scroll-triggered fade-in and fade-out effect for sections
+    window.addEventListener('DOMContentLoaded', function() {
+        var sections = document.querySelectorAll('section');
+        var observer = new window.IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    entry.target.classList.remove('fade-out');
+                } else {
+                    entry.target.classList.remove('fade-in');
+                    entry.target.classList.add('fade-out');
+                }
+            });
+        }, {
+            threshold: 0.05 // Sets the threshold for when the fade-in effect should trigger
+        });
+        sections.forEach(function(section) {
+            observer.observe(section);
+        });
+    });
+    </script>
+
+    <header>
+        <button class="hamburger" id="hamburger-btn" aria-label="Öppna meny" aria-expanded="false" aria-controls="main-nav">
+            <svg class="hamburger-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="7" width="32" height="4" rx="2" fill="#ff9900"/>
+                <rect y="14" width="32" height="4" rx="2" fill="#ff9900"/>
+                <rect y="21" width="32" height="4" rx="2" fill="#ff9900"/>
+            </svg>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="/">Info</a></li>
+                <li><a href="/tjanster">Tjänster</a></li>
+                <li><a href="/lyssna">Lyssna</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/galleri">Galleri</a></li>
+                <li><a href="/faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="nyheter">
+        <h1>Nyheter</h1>
+
+        <div class="news">
+            <span class="news-date">2026-07-29</span>
+            <p class="news-text">Grymt rolig spelning på Skurup Sommarscen, i Skurups stadspark! Tack alla som kom och sjöng med och dansade! Och vilket väder vi hade, vi ville inte gå hem...</p>
+        </div>
+    </section>
+
+    <footer style="background: url('/images/lifeline_superheroes.jpg') center center/cover no-repeat; aspect-ratio: 3/2; width: 100%; min-height: 200px; display: flex; align-items: flex-end;">
+        <p id="footer-year" style="background: rgba(255,255,255,0.8); margin: 0; padding: 8px 16px; border-radius: 8px 8px 0 0;">&copy; <span id="year"></span> Lifeline</p>
+    </footer>
+    <script>
+    // Automatically set the current year in the footer
+    document.addEventListener('DOMContentLoaded', function() {
+        var yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    });
+    </script>
+    <script>
+    // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger-btn');
+        const nav = document.getElementById('main-nav');
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        });
+    });
+    </script>
+</body>
+</html>
