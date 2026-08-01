@@ -17,7 +17,7 @@ All pages share `style.css` and `images/` at the repo root; subpages reference t
 
 ## Local development
 
-Two scripts are provided to preview the site locally without remembering any commands:
+Two scripts are provided to preview the site locally:
 
 - `./local-serve.sh` - starts a local server at http://localhost:8000/ and opens it in your browser. Safe to run again if already running.
 - `./local-stop.sh` - stops the local server.

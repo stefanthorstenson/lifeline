@@ -1,2 +1,4 @@
 Lägg SoMe-länkar i footern
 Lägg in mobilnummer som kontaktuppgift
+Byt namn på Kontakt till Boka
+Clean up style.css
