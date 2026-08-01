@@ -14,3 +14,10 @@ The site is plain static HTML/CSS, no build step. Each top-level page is its own
 - `/galleri` (`galleri/index.html`) - bildgalleri
 
 All pages share `style.css` and `images/` at the repo root; subpages reference them with root-relative paths (`/style.css`, `/images/...`).
+
+## Local development
+
+Two scripts are provided to preview the site locally without remembering any commands:
+
+- `./local-serve.sh` - starts a local server at http://localhost:8000/ and opens it in your browser. Safe to run again if already running.
+- `./local-stop.sh` - stops the local server.
