@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyssna - Lifeline Coverband i Skåne</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- Open Graph meta tags for social media preview -->
+    <meta property="og:title" content="Lyssna - Lifeline Coverband i Skåne" />
+    <meta property="og:description" content="Lyssna på smakprov från repertoaren och vår Spotify-setlist." />
+    <meta property="og:image" content="https://www.lifelineband.se/images/lifeline_superheroes.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.lifelineband.se/lyssna" />
+</head>
+
+<body>
+    <script>
+    // Scroll-triggered fade-in and fade-out effect for sections
+    window.addEventListener('DOMContentLoaded', function() {
+        var sections = document.querySelectorAll('section');
+        var observer = new window.IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    entry.target.classList.remove('fade-out');
+                } else {
+                    entry.target.classList.remove('fade-in');
+                    entry.target.classList.add('fade-out');
+                }
+            });
+        }, {
+            threshold: 0.05 // Sets the threshold for when the fade-in effect should trigger
+        });
+        sections.forEach(function(section) {
+            observer.observe(section);
+        });
+    });
+    </script>
+
+    <header>
+        <button class="hamburger" id="hamburger-btn" aria-label="Öppna meny" aria-expanded="false" aria-controls="main-nav">
+            <svg class="hamburger-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="7" width="32" height="4" rx="2" fill="#ff9900"/>
+                <rect y="14" width="32" height="4" rx="2" fill="#ff9900"/>
+                <rect y="21" width="32" height="4" rx="2" fill="#ff9900"/>
+            </svg>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="/">Info</a></li>
+                <li><a href="/tjanster">Tjänster</a></li>
+                <li><a href="/lyssna">Lyssna</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/galleri">Galleri</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="lyssna">
+        <h1>Lyssna på oss</h1>
+        <p>Lyssna på smakprov från repertoaren här:</p>
+            <div class="video-container"> <!-- Välj video på Youtube, klicka på Dela, Bädda in och kopiera sedan strängen och klistra in nedan -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/F6zOfTOkNoY?si=5bQFrMwKH2ImefsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p><a href="https://youtu.be/qmJx0qZP9VI" target="_blank">Klicka här</a> för att se videon på Youtube.</p>
+        <p>Följ oss på sociala medier:</p>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@LifelineCoverband" target="_blank" aria-label="YouTube" style="margin-right: 12px;">
+                <svg width="50" height="50" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="16" fill="#FF0000"/>
+                    <path d="M23.7 13.1c-.2-.8-.8-1.4-1.6-1.6C20.7 11 16 11 16 11s-4.7 0-6.1.5c-.8.2-1.4.8-1.6 1.6C8 14.5 8 16 8 16s0 1.5.3 2.9c.2.8.8 1.4 1.6 1.6C11.3 21 16 21 16 21s4.7 0 6.1-.5c.8-.2 1.4-.8 1.6-1.6.3-1.4.3-2.9.3-2.9s0-1.5-.3-2.9zM14.5 18.5v-5l4.3 2.5-4.3 2.5z" fill="#fff"/>
+                </svg>
+            </a>
+            <a href="https://vm.tiktok.com/ZNd9Tfpp5" target="_blank" aria-label="TikTok" style="margin-right: 12px;">
+                <svg width="50" height="50" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="16" fill="#000"/>
+                    <path d="M22.5 13.2c-1.1 0-2-.9-2-2V9.1h-2.1v9.1c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.2 0 .4 0 .6.1v-2.1c-.2 0-.4-.1-.6-.1-2.3 0-4.1 1.8-4.1 4.1s1.8 4.1 4.1 4.1 4.1-1.8 4.1-4.1v-3.1c.6.5 1.4.8 2.2.8h.8v-2h-.8z" fill="#fff"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/lifelinecoverband" target="_blank" aria-label="Instagram">
+                <svg width="50" height="50" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="igGradient" cx="30%" cy="107%" r="150%">
+                            <stop offset="0%" stop-color="#fdf497"/>
+                            <stop offset="5%" stop-color="#fdf497"/>
+                            <stop offset="45%" stop-color="#fd5949"/>
+                            <stop offset="60%" stop-color="#d6249f"/>
+                            <stop offset="90%" stop-color="#285AEB"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="16" cy="16" r="16" fill="url(#igGradient)"/>
+                    <rect x="9" y="9" width="14" height="14" rx="4" fill="none" stroke="#fff" stroke-width="1.6"/>
+                    <circle cx="16" cy="16" r="3.6" fill="none" stroke="#fff" stroke-width="1.6"/>
+                    <circle cx="20.2" cy="11.8" r="1" fill="#fff"/>
+                </svg>
+            </a>
+        </div>
+        <p>Här är vår Spotify-setlist med låtar vi spelar. Ni kan välja fritt från den eller så sätter vi ihop ett paket till er som vi tror passar!</p>
+        <div style="max-width: 400px; margin-bottom: 1em;">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1WTiD5KH5TFoRmgUXN7ihG?utm_source=generator" width="100%" height="380" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer style="background: url('/images/lifeline_superheroes.jpg') center center/cover no-repeat; aspect-ratio: 3/2; width: 100%; min-height: 200px; display: flex; align-items: flex-end;">
+        <p id="footer-year" style="background: rgba(255,255,255,0.8); margin: 0; padding: 8px 16px; border-radius: 8px 8px 0 0;">&copy; <span id="year"></span> Lifeline</p>
+    </footer>
+    <script>
+    // Automatically set the current year in the footer
+    document.addEventListener('DOMContentLoaded', function() {
+        var yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    });
+    </script>
+    <script>
+    // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger-btn');
+        const nav = document.getElementById('main-nav');
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        });
+    });
+    </script>
+</body>
+</html>

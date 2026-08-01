@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boka Lifeline - Kontakt</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- Open Graph meta tags for social media preview -->
+    <meta property="og:title" content="Boka Lifeline - Kontakt" />
+    <meta property="og:description" content="Fyll i formuläret för att skicka en bokningsförfrågan till Lifeline." />
+    <meta property="og:image" content="https://www.lifelineband.se/images/lifeline_superheroes.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.lifelineband.se/kontakt" />
+</head>
+
+<body>
+    <script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevents default form submission
+        const form = event.target;
+            fetch(form.action, {
+            method: form.method,
+            body: new FormData(form)
+        })
+        .then(response => {
+            if (response.ok) {
+                document.getElementById("confirmation").style.display = "block"; // Shows confirmation
+                form.reset(); // Clears the form
+            }
+        })
+        .catch(error => console.error("Error during submission:", error));
+    });
+    </script>
+    <script>
+    // Scroll-triggered fade-in and fade-out effect for sections
+    window.addEventListener('DOMContentLoaded', function() {
+        var sections = document.querySelectorAll('section');
+        var observer = new window.IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    entry.target.classList.remove('fade-out');
+                } else {
+                    entry.target.classList.remove('fade-in');
+                    entry.target.classList.add('fade-out');
+                }
+            });
+        }, {
+            threshold: 0.05 // Sets the threshold for when the fade-in effect should trigger
+        });
+        sections.forEach(function(section) {
+            observer.observe(section);
+        });
+    });
+    </script>
+
+    <header>
+        <button class="hamburger" id="hamburger-btn" aria-label="Öppna meny" aria-expanded="false" aria-controls="main-nav">
+            <svg class="hamburger-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="7" width="32" height="4" rx="2" fill="#ff9900"/>
+                <rect y="14" width="32" height="4" rx="2" fill="#ff9900"/>
+                <rect y="21" width="32" height="4" rx="2" fill="#ff9900"/>
+            </svg>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="/">Info</a></li>
+                <li><a href="/tjanster">Tjänster</a></li>
+                <li><a href="/lyssna">Lyssna</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/galleri">Galleri</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="kontakt">
+        <h1>Boka Lifeline</h1>
+        <p>Fyll i formuläret nedan för att skicka en bokningsförfrågan. Ej bindande såklart! Fält markerade med <strong>*</strong> är obligatoriska.</p>
+
+        <form action="https://formsubmit.co/0c6f12740fe3ea3cd046831266073b58" method="POST" target="_self" data-redirect="false">
+            <input type="hidden" name="_captcha" value="false">
+
+            <label for="namn">Namn <strong>*</strong>:</label>
+            <input type="text" id="namn" name="namn" required>
+
+            <label for="email">Email-adress <strong>*</strong>:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="datum">Datum för spelning <strong>*</strong>:</label>
+            <input type="date" id="datum" name="datum" required>
+
+            <label for="event">Typ av event:</label>
+            <input type="text" id="event" name="event">
+
+            <label for="besokare">Ungefärligt antal besökare:</label>
+            <input type="number" id="besokare" name="besokare">
+
+            <label for="langd">Ungefärlig längd på spelning:</label>
+            <input type="text" id="langd" name="langd">
+
+            <label for="utrustning">Ljud- och ljusutrustning finns på plats:</label>
+            <select id="utrustning" name="utrustning" required>
+            <option value="">Välj...</option>
+                <option value="Ja">Ja</option>
+                <option value="Nej">Nej</option>
+                <option value="Delvis">Delvis</option>
+                <option value="Vet ej">Vet ej</option>
+            </select>
+            <div style="margin-bottom: 0.7em;"></div>
+
+            <label for="meddelande">Fritext:</label>
+            <textarea id="meddelande" name="meddelande" rows="4"></textarea>
+
+            <button type="submit">Skicka förfrågan</button>
+        </form>
+
+        <div id="confirmation" style="display: none; color: green; font-weight: bold;">
+            Tack! Din bokningsförfrågan har skickats.
+        </div>
+    </section>
+
+    <footer style="background: url('/images/lifeline_superheroes.jpg') center center/cover no-repeat; aspect-ratio: 3/2; width: 100%; min-height: 200px; display: flex; align-items: flex-end;">
+        <p id="footer-year" style="background: rgba(255,255,255,0.8); margin: 0; padding: 8px 16px; border-radius: 8px 8px 0 0;">&copy; <span id="year"></span> Lifeline</p>
+    </footer>
+    <script>
+    // Automatically set the current year in the footer
+    document.addEventListener('DOMContentLoaded', function() {
+        var yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    });
+    </script>
+    <script>
+    // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger-btn');
+        const nav = document.getElementById('main-nav');
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        });
+    });
+    </script>
+</body>
+</html>
