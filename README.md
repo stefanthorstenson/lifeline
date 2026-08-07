@@ -21,3 +21,19 @@ Two scripts are provided to preview the site locally:
 
 - `./local-serve.sh` - starts a local server at http://localhost:8000/ and opens it in your browser. Safe to run again if already running.
 - `./local-stop.sh` - stops the local server.
+
+## Web deployment
+
+lifelineband.se uses this site. Currently, Loopia is used as the web host.
+
+Configuration on Loopia:
+
+<img width="907" height="355" alt="image" src="https://github.com/user-attachments/assets/a337c1e1-fc53-4fef-99cb-0f9cc1f04c8d" />
+
+<img width="858" height="632" alt="image" src="https://github.com/user-attachments/assets/e1c6ed7e-ac89-4229-acfe-027e7850df6c" />
+
+Configration on Github:
+
+- Settings -> Pages
+  - Custom domain: www.lifelineband.se (note that it took a almost a week the first time the site was deployed)
+    
