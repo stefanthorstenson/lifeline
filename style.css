@@ -273,10 +273,7 @@ section.fade-out {
     pointer-events: none;
 }
 
-button,
-a.button {
-    display: inline-block;
-    text-decoration: none;
+button {
     background-color: #ff6600; /* Snygg orange färg */
     color: white; /* Vit text */
     font-size: 16px; /* Större och tydligare text */
@@ -287,14 +284,8 @@ a.button {
     transition: 0.3s; /* Mjukare hover-effekt */
 }
 
-button:hover,
-a.button:hover {
+button:hover {
     background-color: #e65c00; /* Lite mörkare orange vid hover */
-}
-
-a.button:hover {
-    color: white;
-    text-decoration: none;
 }
 
 #info {
